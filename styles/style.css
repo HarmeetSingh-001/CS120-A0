@@ -1,0 +1,55 @@
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Medium.ttf);
+}
+
+body {
+    font-family: Roboto;
+    color: #F1F0CC;
+    background-color: #3F0D12;
+}
+
+h1 {
+    color: #D5BF86;
+}
+
+h2 {
+    color: #8D775F;
+}
+
+h1,h2 {
+    margin-bottom: 30px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: max-content max-content;
+}
+
+label {
+    text-align: right;
+}
+
+tr:nth-child(even) {
+    background-color: #8D775F;
+}
+
+#SocialIcons {
+    position: absolute;
+    top: 100px;
+    right: 35px;
+}
+
+#PetTable {
+    border: #F1F0CC;
+    border-style: solid;
+    margin: auto;
+    width: 10%;
+}
+
+#FoodImage {
+    background-image: url(../images/cheesecake.jpg);
+    height: 256px;
+    width: 170px;
+    float: left;
+}
