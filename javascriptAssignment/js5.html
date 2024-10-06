@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>JS5</title>
+</head>
+<body>
+    <button onclick="tripleCall()">Click Me</button>
+</body>
+<script>
+    function timesTable(x) {
+        document.write(x + " X 1 = " + (x * 1) + "<br/>");
+        document.write(x + " X 2 = " + (x * 2) + "<br/>");
+        document.write(x + " X 3 = " + (x * 3) + "<br/>");
+        document.write(x + " X 4 = " + (x * 4) + "<br/>");
+        document.write(x + " X 5 = " + (x * 5) + "<br/>");
+        document.write(x + " X 6 = " + (x * 6) + "<br/>");
+        document.write(x + " X 7 = " + (x * 7) + "<br/>");
+        document.write(x + " X 8 = " + (x * 8) + "<br/>");
+        document.write(x + " X 9 = " + (x * 9) + "<br/>");
+        document.write(x + " X 10 = " + (x * 10) + "<br/>");
+        document.write(x + " X 11 = " + (x * 11) + "<br/>");
+        document.write(x + " X 12 = " + (x * 12) + "<br/>");
+    }
+    function tripleCall(){
+        timesTable(3);
+        document.write("<hr/>");
+        timesTable(7);
+        document.write("<hr/>");
+        timesTable(11);
+    }
+</script>
+</html>

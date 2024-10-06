@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>JS6</title>
+</head>
+<body onload="testCount()">
+    <div id="answer"></div>
+</body>
+<script>
+    function count(arr, val) {
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (val > arr[i]){
+                count++;
+            }
+        }
+        return count;
+    }
+    function testCount(){
+        testArr = [3, 55, 30, 28, 9, 12];
+        document.getElementById("answer").innerHTML = count(testArr, 10);
+    }
+</script>
+</html>

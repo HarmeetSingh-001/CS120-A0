@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>JS4</title>
+</head>
+<body onload="oddSum()">
+    
+</body>
+<script>
+    function oddSum() {
+        let first = prompt("Enter your first number.");
+        let second = prompt("Enter your second number.");
+        let larger = Math.max(first, second);
+        let smaller = Math.min(first, second);
+
+        let sum = 0;
+
+        while (smaller <= larger) {
+            if (smaller % 2 != 0) {
+                document.write(smaller + "<br/>");
+            }
+            sum += smaller;
+            smaller++;
+        }
+        document.write("<hr>" + sum);
+    }
+</script>
+</html>

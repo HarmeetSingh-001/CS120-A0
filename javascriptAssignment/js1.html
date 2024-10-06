@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>JS1</title>
+</head>
+<body onload="getName()">
+    <p id="childrenDisplay"></p>
+
+<script>
+    function getName() {
+        let firstName = prompt("Please enter your first name.");
+        let lastName = prompt("Please enter your last name.");
+
+        if (firstName != null || lastName != null){
+            alert("Your name is " + firstName + " " + lastName);
+        }
+
+        let childNumber = prompt("How many children do you have?", "0")
+        childNumber = parseInt(childNumber);
+
+
+        if (childNumber == 0) {
+            document.getElementById("childrenDisplay").innerHTML = "You have no children.";
+        }
+
+        else if (childNumber == 1) {
+            document.getElementById("childrenDisplay").innerHTML = "You have 1 child.";
+        }
+
+        else if (childNumber > 1){
+            document.getElementById("childrenDisplay").innerHTML = "You have " + childNumber + " children.";
+        }
+
+        else {
+            document.getElementById("childrenDisplay").innerHTML = "You have did not enter a valid number.";
+        }
+
+    }
+</script>
+
+</body>
+</html>

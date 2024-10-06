@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>JS2</title>
+</head>
+<body onload="conversion()">
+
+<script>
+    function conversion() {
+        let fahrenheit = prompt("Please enter a temperature in Fahrenheit units.", "0");
+        alert("In Celsius that is: " + (fahrenheit - 32) * 5/9);
+
+        let celsius = prompt("Please enter a temperature in Celsius units.", "0");
+        alert("In Fahrenheit that is: " + ((celsius * (9/5)) + 32));
+    }
+</script>
+
+</body>
+</html>
