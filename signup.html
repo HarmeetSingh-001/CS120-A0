@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Sign-Up</title>
+</head>
+<style>
+/* custom font downloaded from Google Fonts */
+@font-face {
+    font-family: Courier;
+    src: url(../fonts/CourierPrime-Regular.ttf);
+}
+
+/* the following are styling for general parts of the pages unless specified elsewhere */
+body {
+    font-family: Courier;
+    color: #2f1c51;
+    text-decoration: none;
+    background-color: #614651;
+    margin: 0;
+}
+
+h1 {
+    color: #ea757a;
+    text-align: center;
+    font-size: 75px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h2 {
+    color: #943e9b
+}
+
+/* Below are all the div id and class styles */
+
+/* Styling for Header of each page including the navigation bar */
+#topnav {
+    background-color: #90aec0;
+    font-size: 40px;
+    width: 100%;
+    overflow: hidden;
+}
+
+#topnav a {
+    line-height: 50px;
+    width: 20%;
+    text-align: center;
+    float: left;
+}
+
+
+#topnav a:hover {
+    color: #90aec0;
+    background-color: #2f1c51;
+}
+
+.active {
+    color: #2f1c51;
+    background-color: #ea757a;
+}
+
+#header {
+    background-color: #614651;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+/* Styling for Sign-Up section */
+
+#signup {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: #e7ad9b;
+    padding: 2vw;
+    width: 70vw;
+}
+
+#signup h2 {
+    font-size: 50px;
+}
+#signup i {
+    font-size: 20px;
+}
+
+#signup form{
+    margin-top: 2vw;
+    background-color: #ea757a;
+    width: 50vw;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1vw;
+    border-radius: 2vw;
+}
+
+#signup input[type=text] {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #90aec0;
+    background-color: #ffaaaf;
+
+}
+
+#signup input[type=text]:focus {
+  border: 4px solid #90aec0;
+  background-color: #ffdadc;
+}
+
+#signup input[type=submit] {
+    margin: 1vw;
+    width: 80%;
+    border: 2px solid black;
+    background-color: #90aec0;
+    color: #2f1c51;
+}
+
+#signup input[type=submit]:hover {
+    background-color: #2f1c51;
+    color: #90aec0;
+}
+
+
+
+/* Styling for Footer of every page */
+#footer {
+    background-color: #2f1c51;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+#footer table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#footer th {
+    color: #90aec0;
+}
+
+#footer td,#footer p {
+    color: #e7ad9b;
+    text-align: center;
+    padding: 10px;
+}
+
+@media screen and (max-width: 1200px){
+    #signup h2 {
+        font-size: 40px;
+    }
+    #signup i {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 992px){
+    #topnav {
+        font-size: 30px;
+    }
+    #signup i {
+        font-size: 15px;
+    }
+}   
+
+@media screen and (max-width: 768px){
+    #topnav {
+        font-size: 20px;
+    }
+    #signup h2 {
+        font-size: 30px;
+    }
+    #signup i {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    #signup h2 {
+        font-size: 25px;
+    }
+    #signup i {
+        font-size: 12px;
+    }
+}
+
+
+</style>
+<body>
+    <!-- Header for all pages -->
+    <div id="header">
+        <!-- Title of Website -->
+        <h1> DAUGHTER  </h1>
+
+        <!-- Navigation for the site -->
+        <div id="topnav">
+            <a href="project1.html">Home</a>
+            <a href="albums.html">Albums</a>
+            <a href="events.html">Events</a>
+            <a href="about.html">About</a>
+            <a href="signup.html" class="active">Sign-Up</a>
+        </div>
+    </div>
+    
+    <div id="signup" style="margin-top: 233px;">
+        <div id="formHeader">
+            <h2>Sign Up for Alerts</h2>
+            <i>This form will not actually store your name or email address</i>
+        </div>
+
+        <form>
+            <input type="text" id="firstName" name="firstName" placeholder="First Name*"><br>
+            <input type="text" id="lastName" name="lastName" placeholder="Last Name*"><br>
+            <input type="text" id="email" name="email" placeholder="Email Address*"><br>
+            <input type="submit">
+        </form>
+
+    </div> 
+
+
+    <!-- Footer for all pages -->
+    <div id="footer">
+        <p>Credit:</p>
+        <p style="font-style: italic;">Banner Image: Daughter, photo by Marika Kochiashvili</p>
+        <p style="font-style: italic;">Album Images: Sourced from Spotify</p>
+        <p style="font-style: italic;">Band Images: Sourced from Genuis and from Shutterstock</p>
+        <table>
+            <tr>
+                <th>Instagram</th>
+                <th>Twitter</th>
+                <th>Spotify</th>
+            </tr>
+            <tr>
+                <td><a href="https://www.instagram.com/ohdaughter/?hl=en" target="_blank"> @ohdaughter </a></td>
+                <td><a href="https://x.com/ohdaughter?lang=en" target="_blank"> @ohdaughter </a></td>
+                <td><a href="https://open.spotify.com/artist/46CitWgnWrvF9t70C2p1Me" target="_blank"> Daughter </a></td>
+            </tr>
+        </table>
+        <p>Harmeet.Singh674340@tufts.edu</p>
+    </div>
+</body>
+</html>
