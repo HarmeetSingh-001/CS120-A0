@@ -414,6 +414,9 @@ h2 {
 }
 
 @media screen and (max-width: 600px){
+    #topnav {
+        font-size: 15px;
+    }
     #welcome h2 {
         font-size: 23px;
     }
