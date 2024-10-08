@@ -405,6 +405,9 @@ h2 {
     #topnav {
         font-size: 20px;
     }
+    #topnav a{
+        line-height: 80px;
+    }
     #welcome h2 {
         font-size: 30px;
     }
