@@ -319,10 +319,10 @@ h2 {
     color: #90aec0;
 }
 
-#footer td,#footer p {
+#footer td,#footer #credit {
     color: #e7ad9b;
     text-align: center;
-    padding: 10px;
+    padding: 1vw;
 }
 
 @media screen and (max-width: 1200px){
@@ -390,6 +390,12 @@ h2 {
     #eventListing dd {
         padding-bottom: 3vw;
     }
+
+    /* Styling for Footer of every page */
+
+    #footer {
+        font-size: 15px;
+    }
 }   
 
 @media screen and (max-width: 768px){
@@ -402,29 +408,23 @@ h2 {
     #welcome p {
         font-size: 10px;
     }
-    #aboutSection th {
-        font-size: 20px;
-    }
-    #aboutSection td {
-        font-size: 12px;
-    }
-    #aboutSection p {
-        font-size: 18px;
-    }
 }
 
 @media screen and (max-width: 600px){
     #welcome h2 {
-        font-size: 20px;
+        font-size: 23px;
     }
     #welcome p {
-        font-size: 8px;
+        font-size: 9px;
+    }
+    #topnav a{
+        line-height: 80px;
     }
     #featuredGrid .grid-item p{
         font-size: 20px;
     }
-    #aboutSection th {
-        font-size: 13px;
+    #footer {
+        font-size: 12px;
     }
 }
 
