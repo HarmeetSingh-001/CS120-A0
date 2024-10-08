@@ -258,11 +258,31 @@ h2 {
     text-align: center;
 }
 
-#aboutSection h2 {
+#aboutSection h3 {
     font-size: 50px;
 }
 
-#aboutSection table,#aboutSection p{
+#aboutSection .grid-item img {
+    width: 15vw;
+    height: 15vw;
+    min-width: 256px;
+    min-height: 256px;
+}
+
+
+#aboutSection .grid-item p {
+    border: 1px solid #2f1c51;
+    border-radius: 30px;
+    line-height: 55px;
+    font-size: 25px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#aboutSection p{
+    border: 1px solid #2f1c51;
     margin-left: auto;
     margin-right: auto;
     background-color: #ea757a;
@@ -271,18 +291,6 @@ h2 {
 }
 
 
-#aboutSection th {
-    text-align: center;
-    font-size: 30px;
-    
-}
-#aboutSection td {
-    padding-top: 1vw;
-    padding-left: 2vw;
-    padding-right: 2vw;
-    text-align: center;
-    font-size: 20px;
-}
 #aboutSection img {
     width: 20vw;
 }
@@ -338,16 +346,11 @@ h2 {
     #albumsGrid {
         grid-template-columns: 1fr 1fr;
     }
-    #aboutSection th {
-        font-size: 25px;
-    }
-    #aboutSection td {
+    
+    #aboutSection p,#aboutSection .grid-item p  {
         font-size: 18px;
     }
-    #aboutSection p {
-        font-size: 18px;
-    }
-    #aboutSection h2 {
+    #aboutSection h3 {
         font-size: 40px;
     }
 }
@@ -380,10 +383,10 @@ h2 {
     #aboutSection td {
         font-size: 15px;
     }
-    #aboutSection p {
+    #aboutSection p,#aboutSection .grid-item p {
         font-size: 15px;
     }
-    #aboutSection h2 {
+    #aboutSection h3 {
         font-size: 35px;
     }
 
