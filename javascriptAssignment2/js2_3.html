@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>JS2-3</title>
+</head>
+<body>
+    <form>
+        <label for="name">Name: </label><br>
+        <input type="text" id="name" name="name"><br>
+        <input type="button" id="hello" name="hello" value="Hello" onclick="speak(hello)">
+        <input type="button" id="bye" name="bye" value="Good Bye!" onclick="speak(bye)">
+        <input type="button" id="greet" name="greet" value="Greetings!" onclick="speak(greet)">
+    </form>
+</body>
+<script>
+    function speak (prefix) {
+        if (prefix == hello) {
+            alert("Hello " + document.getElementById("name").value);
+        }
+        if (prefix == bye) {
+            alert("Good Bye " + document.getElementById("name").value);
+        }
+        if (prefix == greet) {
+            alert("Greetings " + document.getElementById("name").value);
+        }
+    }   
+</script>
+</html>

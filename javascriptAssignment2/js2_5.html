@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>JS2-5</title>
+</head>
+<body>
+    <p>Pick a State</p>
+    <select name="states" id="states" size="10" style="overflow: hidden;">
+
+    </select>
+    <button id="add">Add State</button>
+    <div id="box" style="border: solid 2px black; width: 200px; min-height: 100px;">
+
+    </div>
+    <button id="clear">Clear States</button>
+</body>
+<script>
+    window.onload = function() {
+        const box = document.getElementById("box");
+        listOfStates = [
+            "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware",
+            "Florida", "Georgia"
+        ]
+        document.getElementById("states").innerHTML += "<option value=" + listOfStates[0] + " selected>" + listOfStates[0] + "</option>";
+        listOfStates.slice(1).map((s) => document.getElementById("states").innerHTML += "<option value=" + s + ">" + s + "</option>");
+        document.getElementById("add").onclick = function() {
+            box.insertAdjacentHTML("beforeend", "<p>" + document.querySelector("select").value + "</p>");
+        }
+        document.getElementById("clear").onclick = function() {
+            box.innerHTML = "";
+        }
+    }
+</script>
+</html>

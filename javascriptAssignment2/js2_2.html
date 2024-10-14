@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>JS2-2</title>
+</head>
+<body>
+    <button onclick="listMaker()">Click Me</button>
+    <ol id="namesList">
+
+    </ol>
+</body>
+<script>
+    function listMaker() {
+        let names = "Pat, Chris, Marlon, Ferncroft, Assunta";
+        names = names.split(", ");
+        names.map((name) => document.getElementById("namesList").innerHTML += "<li>" + name + "</li>");
+    }
+</script>
+</html>

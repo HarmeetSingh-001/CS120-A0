@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>JS2-4</title>
+</head>
+<body>
+    <form>
+        <label for="name">Name: </label><br>
+        <input type="text" id="name" name="name"><br>
+        <input type="button" id="hello" name="hello" value="Hello">
+        <input type="button" id="bye" name="bye" value="Good Bye!">
+        <input type="button" id="greet" name="greet" value="Greetings!">
+    </form>
+</body>
+<script>
+    window.onload = function() {
+        document.getElementById("hello").onclick = function() {
+            alert("Hello " + document.getElementById("name").value);
+        }
+        document.getElementById("bye").onclick = function() {
+            alert("Good Bye " + document.getElementById("name").value);
+        }
+        document.getElementById("greet").onclick = function() {
+            alert("Greetings " + document.getElementById("name").value);
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>JS2-EC</title>
+</head>
+<body>
+    <p>Pick a State</p>
+    <select name="states" id="states" size="10" style="overflow: hidden; width: 200px">
+
+    </select>
+    <br/><button id="add">Add State</button>
+    <div style="border: solid 2px black; width: 200px; min-height: 100px;">
+        <ol id="box">
+
+        </ol>
+    </div>
+    <button id="clear">Clear States</button>
+</body>
+<script>
+    window.onload = function() {
+        const box = document.getElementById("box");
+        const statesBox = document.getElementById("states");
+        listOfStates = [
+            "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware",
+            "Florida", "Georgia"
+        ];
+
+        loadList(listOfStates);
+
+        document.getElementById("add").onclick = function() {
+            if (document.querySelector("select").value != "") {
+                box.insertAdjacentHTML("beforeend", "<li>" + document.querySelector("select").value + "</li>");
+                document.getElementById("states").remove(document.getElementById("states").selectedIndex);
+            }
+        }
+
+        document.getElementById("clear").onclick = function() {
+            box.innerHTML = "";
+            statesBox.innerHTML = "";
+            loadList(listOfStates);
+        }
+    }
+
+    function loadList(x) {
+        document.getElementById("states").innerHTML += "<option value=" + x[0] + " selected>" + x[0] + "</option>";
+        x.slice(1).map((s) => document.getElementById("states").innerHTML += "<option value=" + s + ">" + s + "</option>");
+    }
+</script>
+</html>
