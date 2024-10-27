@@ -155,6 +155,48 @@
         "artist": "Luke Bryan",
         "release": 2013,
         "genre": ["Country"]
+    },
+
+    {
+        "title": "Rhapsody in Blue",
+        "artist": "George Gershwin",
+        "release": 1924,
+        "genre": ["Classical", "Jazz"]
+    },
+
+    {
+        "title": "All of Me",
+        "artist": "Billie Holiday",
+        "release": 1941,
+        "genre": ["Jazz", "Swing"]
+    },
+
+    {
+        "title": "The End",
+        "artist": "The Doors",
+        "release": 1967,
+        "genre": ["Rock"]
+    },
+
+    {
+        "title": "Sk8er Boi",
+        "artist": "Avril Lavigne",
+        "release": 2002,
+        "genre": ["Pop-Punk"]
+    },
+
+    {
+        "title": "Layla",
+        "artist": "Eric Clapton",
+        "release": 1973,
+        "genre": ["Rock"]
+    },
+
+    {
+        "title": "MANIAC",
+        "artist": "Stray Kids",
+        "release": 2022,
+        "genre": ["Trap", "K-Pop"]
     }
     
 ]
