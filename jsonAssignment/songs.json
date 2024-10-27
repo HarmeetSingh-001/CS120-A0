@@ -39,7 +39,7 @@
         "title": "Dandelion",
         "artist": "Daughter",
         "release": 2023,
-        "genre": ["Shimmer Pop", "Chamber Pop", "Pop"]
+        "genre": ["Shimmer Pop", "Chamber Pop", "Pop", "Indie"]
     },
     {
         "title": "Drown",
@@ -58,5 +58,103 @@
         "artist": "Blue Swede",
         "release": 1973,
         "genre": ["Classic Swedish Pop", "Pop"]
+    },
+    {
+        "title": "Sweater Weather",
+        "artist": "The Neighbourhood",
+        "release": 2013,
+        "genre": ["Alternative Rock", "Indie Pop"]
+    },
+
+    {
+        "title": "Daddy Issues",
+        "artist": "The Neighbourhood",
+        "release": 2015,
+        "genre": ["Alternative Rock", "Indie Pop"]
+    },
+
+    {
+        "title": "Swim",
+        "artist": "Chase Atlantic",
+        "release": 2017,
+        "genre": ["Alternative R&B", "Indie Pop"]
+    },
+
+    {
+        "title": "pink party",
+        "artist": "Isaac Dunbar",
+        "release": 2020,
+        "genre": ["Pop", "Indie Pop"]
+    },
+
+    {
+        "title": "I Was Sad Last Night I'm OK Now",
+        "artist": "tobi lou",
+        "release": 2018,
+        "genre": ["Hip-Hop", "Alternative R&B"]
+    },
+
+    {
+        "title": "All the Things I Hate About You",
+        "artist": "huddy",
+        "release": 2020,
+        "genre": ["Pop Punk", "Alternative Rock"]
+    },
+
+    {
+        "title": "Elastic",
+        "artist": "Joey Purp",
+        "release": 2016,
+        "genre": ["Hip-Hop", "Rap"]
+    },
+
+    {
+        "title": "blood // water",
+        "artist": "grandson",
+        "release": 2018,
+        "genre": ["Alternative Rock", "Electropunk"]
+    },   
+
+    {
+        "title": "Unholy",
+        "artist": "Sam Smith",
+        "release": 2022,
+        "genre": ["Pop", "Dance"]
+    },
+
+    {
+        "title": "Do I Wanna Know?",
+        "artist": "Arctic Monkeys",
+        "release": 2013,
+        "genre": ["Indie Rock", "Alternative Rock"]
+    },
+
+    {
+        "title": "I Wanna Dance with Somebody (Who Loves Me)",
+        "artist": "Whitney Houston",
+        "release": 1987,
+        "genre": ["Dance-Pop", "Soul"]
+    },
+
+    {
+        "title": "Mr. Brightside",
+        "artist": "The Killers",
+        "release": 2004,
+        "genre": ["Alternative", "Indie"]
+    },
+
+    {
+        "title": "Playground",
+        "artist": "Bea Miller",
+        "release": 2021,
+        "genre": ["Alternative", "Indie"]
+    },
+
+    {
+        "title": "Roller Coaster",
+        "artist": "Luke Bryan",
+        "release": 2013,
+        "genre": ["Country"]
     }
+    
 ]
