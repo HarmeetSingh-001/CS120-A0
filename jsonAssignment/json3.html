@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>json2</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $.getJSON("http://127.0.0.1:5500/songs.json", function(songs) {
+                displayGenres(songs);
+                $("button").click( function() {
+                    let userGenre = ($("select").val());
+                    displaySongs(songs, userGenre);
+                    console.log(userGenre);
+                })
+                
+            });
+        });
+
+        function displaySongs(songs, userGenre){
+            let htmlCode = "";
+            $("#songDisplay").html(htmlCode);
+            $.each(songs, function(index) {
+                if (songs[index].genre.includes(userGenre.toString()) || userGenre.toString() == "any")
+                htmlCode += "<b style='font-size: x-large;'>" + songs[index].title + "</b> <br/>";
+            });
+            $("#songDisplay").html(htmlCode);
+        }
+
+        function displayGenres(songs){
+            let genreArray = [];
+            let selectCode = "<option value='any'>Any</option>";
+            $.each(songs, function(index){
+                songs[index].genre.forEach(genre => {
+                    if (!genreArray.includes(genre)){
+                        genreArray.push(genre);
+                    }
+                })
+            })
+            genreArray.forEach(genre => {
+                selectCode += "<option value='" + genre + "'>"+ genre +"</option>";
+            })
+            $("#genres").html(selectCode);
+        }
+        
+    </script>
+</head>
+<body>
+    <label for="genres"> Pick a genre: </label>
+    <select name="genres" id="genres">
+        
+    </select>
+    <button type="button">Filter</button>
+    <div id="songDisplay">
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>json2</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $.getJSON("http://127.0.0.1:5500/songs.json", function(songs) {
+                let htmlCode = "";
+                $.each(songs, function(index) {
+                    htmlCode += "<b style='font-size: x-large;'>" + songs[index].title + "</b> <br/>";
+                    htmlCode += "<i>" + songs[index].artist + "</i>";
+                    htmlCode += "<div>" + songs[index].release + "</div> <div>";
+                    songs[index].genre.forEach(genre => {
+                        htmlCode += "'" + genre + "'" + " ";
+                    });
+                    htmlCode += "</div> <br/>"
+                });
+                $("#songDisplay").html(htmlCode);
+            });
+        });
+        
+    </script>
+</head>
+<body>
+    <div id="songDisplay">
+    </div>
+</body>
+
+</html>

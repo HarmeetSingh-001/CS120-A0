@@ -1,0 +1,62 @@
+[
+    {
+        "title": "The Call",
+        "artist": "Matthew Chalmers",
+        "release": 2024,
+        "genre": ["Rock", "Video Game Soundtrack"]
+    },
+    {
+        "title": "Under the Tree",
+        "artist": "SiM",
+        "release": 2023,
+        "genre": ["Japanese Screamo", "Japanese Metalcore"]
+    },
+    {
+        "title": "God of War Ragnarök (ft. Eivør)",
+        "artist": "Bear McCreary",
+        "release": 2022,
+        "genre": ["Viking Folk", "Rune Folk", "Orchestral Soundtrack", "Video Game Soundtrack"]
+    },
+    {
+        "title": "Like a Prayer",
+        "artist": "Madonna",
+        "release": 2009,
+        "genre": ["Pop"]
+    },
+    {
+        "title": "Old Habits Die Hard",
+        "artist": "Allie X",
+        "release": 2017,
+        "genre": ["Electro Pop", "Dark Pop", "Pop"]
+    },
+    {
+        "title": "Phantom Liberty",
+        "artist": "Dawid Podsiadlo",
+        "release": 2023,
+        "genre": ["Polish Pop", "Pop", "Video Game Soundtrack"]
+    },
+    {
+        "title": "Dandelion",
+        "artist": "Daughter",
+        "release": 2023,
+        "genre": ["Shimmer Pop", "Chamber Pop", "Pop"]
+    },
+    {
+        "title": "Drown",
+        "artist": "milet",
+        "release": 2019,
+        "genre": ["J-Pop", "Pop"]
+    },
+    {
+        "title": "Snakes",
+        "artist": "PVRIS, MIYAVI",
+        "release": 2021,
+        "genre": ["Pop Punk", "Pop Emo", "Pop"]
+    },
+    {
+        "title": "Hooked On A Feeling",
+        "artist": "Blue Swede",
+        "release": 1973,
+        "genre": ["Classic Swedish Pop", "Pop"]
+    }
+]
