@@ -6,7 +6,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function(){
-            $.getJSON("http://127.0.0.1:5500/songs.json", function(songs) {
+            $.getJSON("https://harmeetsingh-001.github.io/CS120-A0/jsonAssignment/songs.json", function(songs) {
                 displayGenres(songs);
                 $("button").click( function() {
                     let userGenre = ($("select").val());
