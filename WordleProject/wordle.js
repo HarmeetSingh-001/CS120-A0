@@ -293,6 +293,10 @@ function setCookie(name, value){
 
 function getCookie(name){
     let cookies = document.cookie.split("; ");
+    if (cookies[0] == null || cookies[1] == null){
+        setCookie("guesses", 0);
+        setCookie("attempts", 0);
+    }
     if (cookies[0].split("=")[0] == name){
         let value = parseInt(cookies[0].split("=")[1]);
         if (value == "") {
