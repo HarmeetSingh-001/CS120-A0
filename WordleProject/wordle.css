@@ -3,6 +3,9 @@ body {
     max-width: fit-content;
     margin-left: auto;
     margin-right: auto;
+
+    color: #ffffff;
+    background-color: #121213;
 }
 
 h2 {
@@ -21,11 +24,15 @@ button {
     border-radius: 3vw;
     width: 20vw;
     height: 2vw;
+
+    color: #ffffff;
+    background-color: #30302e;
+    border: solid 2px #3f3f3f;
 }
 
 button:hover {
-    background-color: black;
-    color: white;
+    color: #ffffff;
+    background-color: #000000;
 }
 
 
@@ -50,7 +57,7 @@ button:hover {
     text-align: center;
     padding: 0.4vw;
 
-    border: 2px solid black;
+    border: 2px solid #818384;
 }
 
 #userGuess {
@@ -69,7 +76,7 @@ button:hover {
     display: inline-block;
     width: 5vw;
     height: 5vw;
-    border: 2px solid black;
+    border: 2px solid #2f2f30;
     font-size: 5vw;
     line-height: 1vw;
     text-align: center;
@@ -77,6 +84,64 @@ button:hover {
     margin: 0;
 }
 
+@media screen and (max-width: 1600px){
+    .letter {
+        width: 7vw;
+        height: 7vw;
+        font-size: 7vw;
+    }
+    #letterBoard {
+        font-size: 1.7vw;
+    }
+    #userGuess {
+        height: 3vw;
+        width: 30vw;
+    }
+    button {
+        border-radius: 5vw;
+        width: 30vw;
+        height: 3vw;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .letter {
+        width: 10vw;
+        height: 10vw;
+        font-size: 10vw;
+    }
+    #letterBoard {
+        font-size: 3vw;
+    }
+    #userGuess {
+        height: 4vw;
+        width: 30vw;
+    }
+    button {
+        border-radius: 5vw;
+        width: 30vw;
+        height: 4vw;
+    }
+}
 
 
+@media screen and (max-width: 800px){
+    .letter {
+        width: 12vw;
+        height: 12vw;
+        font-size: 12vw;
+    }
+    #letterBoard {
+        font-size: 5vw;
+    }
+    #userGuess {
+        height: 4vw;
+        width: 40vw;
+    }
+    button {
+        border-radius: 6vw;
+        width: 40vw;
+        height: 6vw;
+    }
+}
 
