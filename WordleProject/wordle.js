@@ -9,6 +9,7 @@ window.onload = function() {
     // used to check if the word given is valid, continues if it is, asks again if not
     let valid = true;
 
+    checkCookies();
 
     // let the user also use the enter key to submit
     document.getElementById("userGuess").addEventListener("keypress", function(event) {
@@ -293,10 +294,6 @@ function setCookie(name, value){
 
 function getCookie(name){
     let cookies = document.cookie.split("; ");
-    if (cookies[0] == null || cookies[1] == null){
-        setCookie("guesses", 0);
-        setCookie("attempts", 0);
-    }
     if (cookies[0].split("=")[0] == name){
         let value = parseInt(cookies[0].split("=")[1]);
         if (value == "") {
@@ -310,5 +307,13 @@ function getCookie(name){
             return 0;
         }
         return value;
+    }
+}
+
+// if cookies do not exist yet, create them with starting values
+function checkCookies(){
+    if (document.cookie.indexOf("guesses=") == -1 || document.cookie.indexOf("attempts=") == -1){
+        setCookie("guesses", 0);
+        setCookie("attempts", 0);
     }
 }
