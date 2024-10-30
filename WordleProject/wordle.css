@@ -157,3 +157,23 @@ button:hover {
     }
 }
 
+@media screen and (max-width: 600px){
+    .letter {
+        width: 14vw;
+        height: 14vw;
+        font-size: 14vw;
+    }
+    #letterBoard {
+        font-size: 6vw;
+    }
+    #userGuess {
+        height: 5vw;
+        width: 50vw;
+    }
+    button {
+        border-radius: 6vw;
+        width: 50vw;
+        height: 9vw;
+    }
+}
+
