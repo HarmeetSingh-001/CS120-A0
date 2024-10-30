@@ -283,7 +283,6 @@ function updateGameState(n, b) {
     else {
         setCookie("attempts", getCookie("attempts") + 1);
     }
-    console.log(document.cookie);
 
 }
 
