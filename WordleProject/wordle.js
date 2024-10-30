@@ -1,5 +1,4 @@
 window.onload = function() {
-
     // used to create initial answer
     answerList = createAnswer();
     console.log(answerList[0]);
@@ -58,6 +57,10 @@ window.onload = function() {
     document.getElementById("newGame").onclick = function () {
         location.reload();
     }
+
+    document.getElementById("averageGuess").onclick = function () {
+        alert("Your average is: " + Math.ceil(getCookie("guesses")/getCookie("attempts")) + " guesses");
+    }
 }
 
 
@@ -85,8 +88,8 @@ function colorGuess(s,n,w) {
     // first check each letter to see if it is already in the correct spot
     s.forEach(c => {
         if (c === w[charIndex]) {
-            document.getElementById("guess" + n).querySelector(".letter" + (charIndex + 1)).setAttribute("style", "background-color:green");
-            document.getElementById(c).setAttribute("style", "background-color:green;");
+            document.getElementById("guess" + n).querySelector(".letter" + (charIndex + 1)).setAttribute("style", "background-color:#538d4e");
+            document.getElementById(c).setAttribute("style", "background-color:#538d4e;");
             w[charIndex] = "";
             correct++;
         }
@@ -94,11 +97,12 @@ function colorGuess(s,n,w) {
     });
     if (correct == 5) {
         alert("YOU DID IT! The word was " + answerList[0]);
-        document.getElementById("newGame").style.display = "block";
+        updateGameState(n, true);
+        
     }
     else if (n == 6) {
         alert("You ran out of guesses! The word was " + answerList[0]);
-        document.getElementById("newGame").style.display = "block";
+        updateGameState(n, false);
     }
 
     // set index to 0 for second loop
@@ -106,18 +110,18 @@ function colorGuess(s,n,w) {
     // this loop checks the letters again and sees if they exist in the answer and if they do, update the color
     s.forEach(c => {
         if (w.includes(c) && document.getElementById("guess" + n).querySelector(".letter" + (charIndex + 1)).getAttribute("style") == null){
-            document.getElementById("guess" + n).querySelector(".letter" + (charIndex + 1)).setAttribute("style", "background-color:yellow");
+            document.getElementById("guess" + n).querySelector(".letter" + (charIndex + 1)).setAttribute("style", "background-color:#b59f3b");
             if (document.getElementById(c).getAttribute("style") == null){
-                document.getElementById(c).setAttribute("style", "background-color:yellow;");
+                document.getElementById(c).setAttribute("style", "background-color:#b59f3b;");
             }
             w[w.indexOf(c)] = "";
         }
         else {
             if (document.getElementById("guess" + n).querySelector(".letter" + (charIndex + 1)).getAttribute("style") == null){
-                document.getElementById("guess" + n).querySelector(".letter" + (charIndex + 1)).setAttribute("style", "background-color:red");
+                document.getElementById("guess" + n).querySelector(".letter" + (charIndex + 1)).setAttribute("style", "background-color:#953c3c");
             }
             if (document.getElementById(c).getAttribute("style") == null) {
-                document.getElementById(c).setAttribute("style", "background-color:red;");
+                document.getElementById(c).setAttribute("style", "background-color:#953c3c;");
             }
         }
         charIndex++;
@@ -261,4 +265,47 @@ function createAnswer(){
 // used to reset the compared list on each guess to ensure reliable feedback
 function resetAnswer(w) {
     return w.split("");
+}
+
+// updates the game screen to remove the input field and offer new game option and showing average guesses option.
+// also updates cookie
+// n = guess number, b (boolean) = if they got the word or not
+function updateGameState(n, b) {
+    // updates the page with end game screen
+    document.getElementById("submit").style.display = "none";
+    document.getElementById("userGuess").style.display = "none";
+    document.getElementById("newGame").style.display = "block";
+
+    if (b){
+        setCookie("guesses", getCookie("guesses") + n);
+        setCookie("attempts", getCookie("attempts") + 1);
+    }
+    else {
+        setCookie("attempts", getCookie("attempts") + 1);
+    }
+    console.log(document.cookie);
+
+}
+
+// cookie functions
+function setCookie(name, value){
+    document.cookie = name + "=" + value + ";";
+}
+
+function getCookie(name){
+    let cookies = document.cookie.split("; ");
+    if (cookies[0].split("=")[0] == name){
+        let value = parseInt(cookies[0].split("=")[1]);
+        if (value == "") {
+            return 0;
+        }
+        return value;
+    }
+    else {
+        let value = parseInt(cookies[1].split("=")[1]);
+        if (value == "") {
+            return 0;
+        }
+        return value;
+    }
 }
