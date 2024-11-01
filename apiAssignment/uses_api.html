@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Game Finder</title>
+    <style>
+        h1,h2 {
+            max-width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #gameGrid {
+            max-width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            row-gap: 2vw;
+            column-gap: 2vw;
+        }
+        .gameTile {
+            border: 2px solid black;
+            width: 20vw;
+            height: 20vw;
+        }
+        .gameTile img {
+            width: 100%;
+        }
+        .gameTile p {
+            text-align: center;
+            font-size: 1vw;
+        }
+        .title {
+            text-align: center;
+            max-width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 2vw;
+        }
+    </style>
+</head>
+<body>
+    <h1> Harmeet's Free Game Finder</h1>
+    <h2>Get information about currently free games on PC!</h2>
+    <div id="gameGrid"></div>
+</body>
+<script>
+    // using a CORS proxy for the request
+    url = "https://corsproxy.io/?https://www.freetogame.com/api/games?platform=pc&sort-by=alphabetical";
+    fetch(url)
+        .then(res => res.text())
+        .then (data => 
+        {
+            let parsedData = JSON.parse(data);
+            parsedData.forEach(game => {
+                document.getElementById("gameGrid").insertAdjacentHTML("beforeend", "<div class='gameTile'> <img src='" + game.thumbnail + "'><br/><div class='title'><a href='" +
+                    game.game_url + "'>" + game.title + "</a></div><p>" + game.short_description + "</p></div>");
+            });
+        })
+    .catch (error => console.log(error))
+</script>
+</html>
